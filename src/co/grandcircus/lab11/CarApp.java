@@ -46,7 +46,7 @@ public class CarApp {
 				System.out.println("Car added! Hit enter to return to the main menu.");
 				scnr.nextLine();
 				break;
-				
+
 			case ("Remove A Car"):
 				// TODO: Refactor this logic ...
 				if (myLot.getLot().size() == 0) {
@@ -81,6 +81,14 @@ public class CarApp {
 				}
 
 			case ("Lookup A Car By Parking Space"):
+				int desiredPosition = 0;
+				System.out
+						.println("Enter a number 1-" + myLot.getLot().size() + " to see the car in that parking space");
+				desiredPosition = (Integer.parseInt(scnr.nextLine()) - 1);
+				System.out.println("The car in that parking space is: ");
+				System.out.println(myLot.getLot().get(desiredPosition));
+				System.out.println("Hit enter to return to the main menu");
+				scnr.nextLine();
 				break;
 
 			case ("Quit Car App"):
